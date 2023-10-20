@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="flex">
+    <ion-title>
+      Shows
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-searchbar class="m-2" [(ngModel)]="searchFilter"></ion-searchbar>
+
+  <div class="flex flex-col p-4 rounded-lg bg-darkGray m-2" *ngFor="let genre of showsByGenre | search: searchFilter">
+    <span class="text-[2rem] mx-3">{{genre.key}}</span>
+    <div class="flex flex-row overflow-x-scroll">
+      <app-show-card (click)="goToDetail(show.id)" *ngFor="let show of genre.shows" [tvShow]="show"></app-show-card>
+    </div>
+
+  </div>
+</ion-content>

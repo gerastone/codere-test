@@ -1,0 +1,11 @@
+<ion-card *ngIf="tvShow" class="card-trigger cursor-pointer min-w-[20rem] w-[20rem] h-[30rem] flex flex-col justify-end"
+  [ngStyle]="getBackground(tvShow.image.original)">
+  <ion-header class="flex p-2 justify-end">
+    <ion-badge class="bg-[white] text-black" slot="end">Rating: {{tvShow.rating.average}}</ion-badge>
+  </ion-header>
+  <ion-card-content class="bg-light opacity-80 text-black hidden-card max-h-[50%] flex-col">
+    <ion-card-title class="text-black">{{tvShow.name}}</ion-card-title>
+    <div class="max-h-[80%] whitespace-no-wrap overflow-hidden text-overflow-ellipsis" [innerHTML]="tvShow.summary">
+    </div>
+  </ion-card-content>
+</ion-card>

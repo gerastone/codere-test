@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      TV Show Details
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="bg-gray-100">
+  <div *ngIf="tvShow" class="p-4">
+    <div class="detailed-info p-6 shadow-md justify-around">
+      <img [src]="tvShow.image.original" alt="TV Show Image" class="w-[300px] rounded-lg mb-4">
+      <div class="flex-col my-auto">
+        <h2 class="text-2xl font-semibold">{{ tvShow.name }}</h2>
+        <div class="mt-2 text-gray-600">
+          <p><strong>Type:</strong> {{ tvShow.type }}</p>
+          <p><strong>Language:</strong> {{ tvShow.language }}</p>
+          <p><strong>Genres:</strong> {{ tvShow.genres.join(', ') }}</p>
+          <p><strong>Status:</strong> {{ tvShow.status }}</p>
+          <p><strong>Average Runtime:</strong> {{ tvShow.averageRuntime }} minutes</p>
+          <p><strong>Premiered:</strong> {{ tvShow.premiered | date: 'longDate' }}</p>
+          <p><strong>Ended:</strong> {{ tvShow.ended | date: 'longDate' }}</p>
+          <p><strong>Official Site:</strong> <a [href]="tvShow.officialSite" class="text-blue-500">{{
+              tvShow.officialSite}}</a></p>
+        </div>
+      </div>
+
+    </div>
+    <div class="mt-4">
+      <h3 class="text-xl font-semibold">Summary</h3>
+      <div [innerHTML]="tvShow.summary" class="mt-2"></div>
+    </div>
+  </div>
+</ion-content>

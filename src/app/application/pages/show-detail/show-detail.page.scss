@@ -1,0 +1,54 @@
+@import "src/theme/variables";
+ion-card {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+ion-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+ion-card-content {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+img {
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bg-gray-100 {
+  background-color: #646464;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.text-blue-500 {
+  color: #3498db;
+}
+
+.shadow-md {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+@media (max-width: $phone_breakpoint) {
+  .detailed-info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: $phone_breakpoint) {
+  .detailed-info {
+    display: flex;
+  }
+}

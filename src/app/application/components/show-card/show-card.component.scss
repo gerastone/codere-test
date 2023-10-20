@@ -1,0 +1,7 @@
+.hidden-card {
+    display: none;
+}
+
+.card-trigger:hover .hidden-card {
+    display: flex;
+}

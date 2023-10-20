@@ -1,0 +1,7 @@
+{
+  "name": "codere-test",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
