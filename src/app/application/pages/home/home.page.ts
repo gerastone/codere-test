@@ -3,8 +3,8 @@ import { Store } from '@ngrx/store';
 import { Subject, takeUntil } from 'rxjs';
 import { TvShow } from 'src/app/domain/types/tvshow';
 import { ShowByGenre } from 'src/app/domain/types/showByGenre';
-import { getTvShowsAction } from 'src/app/infraestructure/store/actions/tvshows.action';
-import { selectTvShows } from 'src/app/infraestructure/store/selector/tvshows.selector';
+import { getTvShowsAction } from '../../../infraestructure/store/actions/tvshows.action';
+import { selectTvShows } from '../../../infraestructure/store/selector/tvshows.selector';
 import { IAppState } from 'src/app/infraestructure/store/state/app.state';
 import { Router } from '@angular/router';
 
@@ -58,7 +58,6 @@ export class HomePage implements OnInit, OnDestroy {
   }
 
   onSearch(event: any) {
-    console.log(event.detail.value)
     this.searchFilter = event.detail.value;
   }
 
